@@ -1,0 +1,44 @@
+{
+  "name": "translateBar",
+  "productName": "translateBar",
+  "version": "1.0.0",
+  "description": "Google Translate Shortcut for macOS Bar",
+  "main": "src/server/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "",
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "electron-util": "^0.17.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "electron": "^21.2.3",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  },
+  "build": {
+    "files": [
+      "**/*",
+      "src/client"
+    ],
+    "appId": "com.quyi.translateBar",
+    "mac": {
+      "target": {
+        "target": "default",
+        "arch": [
+          "x64",
+          "arm64",
+          "universal"
+        ]
+      }
+    },
+    "dmg": {
+      "title": "${productName}"
+    }
+  }
+}
