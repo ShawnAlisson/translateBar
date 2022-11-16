@@ -2,3 +2,4 @@
 node_modules
 dist
 .eslintrc.json
+.DS_Store
